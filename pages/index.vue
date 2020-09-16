@@ -13,10 +13,15 @@
           :to="{ name: 'blog-slug', params: { slug: article.slug } }"
           class="flex transition-shadow duration-150 ease-in-out shadow-sm hover:shadow-md xxlmax:flex-col"
         >
-          <img
+          <ix-img
             v-if="article.img"
             class="h-48 xxlmin:w-1/2 xxlmax:w-full object-cover"
             :src="article.img"
+            sizes="(min-width: 692px) 40vw, 90vw"
+            height="620"
+            :imgixParams="{ fit: 'fill', fill: 'blur' }"
+            loading="lazy"
+            fixed
           />
 
           <div
@@ -49,19 +54,19 @@
     </ul>
     <footer class="flex justify-center border-gray-500 border-t-2">
       <p class="mt-4">
-        Created by
+        Originally Created by Debbie O'Brien, modified by
         <a
-          href="https://twitter.com/debs_obrien"
+          href="https://twitter.com/tomdale21"
           class="font-bold hover:underline"
-          >Debbie O'Brien</a
+          >Tom Dale</a
         >
-        at NuxtJS. See the
+        at imgix. See the
         <a
-          href="https://nuxtjs.org/blog/creating-blog-with-nuxt-content"
+          href="https://github.com/daletom/imgix-demo-blog-nuxtcontent"
           class="font-bold hover:underline"
-          >tutorial</a
+          >GH Repo</a
         >
-        for how to build it.
+        for how I added responsize images to it.
       </p>
     </footer>
   </div>

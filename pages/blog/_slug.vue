@@ -3,10 +3,12 @@
     class="flex lg:h-screen w-screen lg:overflow-hidden xs:flex-col lg:flex-row"
   >
     <div class="relative lg:w-1/2 xs:w-full xs:h-84 lg:h-full post-left">
-      <img
+      <ix-img
         :src="article.img"
         :alt="article.alt"
         class="absolute h-full w-full object-cover"
+        sizes="(min-width: 922px) 50vw, 100vw"
+        loading="lazy"
       />
       <div class="overlay"></div>
       <div class="absolute top-32 left-32 text-white">

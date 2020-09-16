@@ -3,10 +3,12 @@
     class="flex lg:h-screen w-screen lg:overflow-hidden xs:flex-col lg:flex-row"
   >
     <div class="relative lg:w-1/2 xs:w-full xs:h-84 lg:h-full post-left">
-      <img
+      <ix-img
         :src="articles[0].author.img"
         :alt="articles[0].author.name"
         class="absolute h-full w-full object-cover"
+        sizes="(min-width: 922px) 50vw, 100vw"
+        loading="lazy"
       />
     </div>
 
@@ -39,11 +41,14 @@
             :to="{ name: 'blog-slug', params: { slug: article.slug } }"
             class="flex transition-shadow duration-150 ease-in-out shadow-sm hover:shadow-md xxlmax:flex-col"
           >
-            <img
+            <ix-img
               v-if="article.img"
               class="h-48 xxlmin:w-1/2 xxlmax:w-full object-cover"
               :src="article.img"
               :alt="article.alt"
+              :imgixParams="{ h: '192', fit: 'crop' }"
+              sizes="(min-width: 1216px) calc(25vw - 150px), (min-width: 922px) calc(50vw -150px), 90vw"
+              loading="lazy"
             />
 
             <div

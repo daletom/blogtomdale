@@ -1,12 +1,12 @@
 ---
 title: My Third Blog Post
 description: Learning how to use @nuxt/content to create a blog
-img: https://images.unsplash.com/photo-1588010986054-727675e6f36a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60
+img: /photo-1588010986054-727675e6f36a
 alt: my third blog post
 author: 
   name: Alexandra
   bio: All about Alexandra and where she works and what she does
-  img: https://images.unsplash.com/photo-1506956191951-7a88da4435e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60
+  img: /photo-1506956191951-7a88da4435e5
 tags: 
   - javascript
   - web development

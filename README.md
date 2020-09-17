@@ -45,6 +45,12 @@ What about Firefox & Safari?  Well, I added in the sizes=, which will use the im
 
 This is giving us great Responsive images now!  
 
+# What did we get from all of this?
+
+Well, with a responsive design we are now loading the correct size images to match the various breakpoints of this website.  Looking at a desktop view, the weight of the website is decreased from 1.6 MB to 540 KB.  This is particularly insteresting because the images were originally on imgix, they just weren't responsive and serving the correct sizes.  By including Client Hints & installing the imgix vue SDK, we were able to modify those sizes correctly and get a lower weight site.
+
+Also, sometimes more importantly, I had some fun learning more about the Content offering from Nuxt, a tool I truly love!
+
 Click here to view the [demo](https://imgix-demo-blog-nuxtcontent.vercel.app/)
 
 ![demo of blog](https://tom.imgix.net/imgixnuxtcontentdemoblog.png?w=1000&fm=jpg)

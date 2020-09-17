@@ -1,0 +1,11 @@
+{
+    "routes": [
+        {
+        "src": "/*",
+            "headers": {
+              "Accept-CH": "DPR, Width, Viewport-Width",
+              "Feature-Policy": "ch-dpr https://images.unsplash.com 'self'; ch-width https://images.unsplash.com 'self'; ch-viewport-width https://images.unsplash.com 'self'"
+            }
+        }
+    ]
+  }

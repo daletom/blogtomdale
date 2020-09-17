@@ -48,8 +48,7 @@
               class="h-48 xxlmin:w-1/2 xxlmax:w-full object-cover"
               :src="article.img"
               :alt="article.alt"
-              :imgixParams="{ h: '192', fit: 'crop' }"
-              sizes="(min-width: 1216px) calc(25vw - 150px), (min-width: 922px) calc(50vw -150px), 90vw"
+              sizes="(min-width: 1216px) calc(25vw - 150px), (min-width: 922px) calc(50vw - 150px), 90vw"
               loading="lazy"
             />
 

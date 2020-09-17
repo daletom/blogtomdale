@@ -39,10 +39,10 @@
           All articles
         </NuxtLink>
         <a
-          href="https://nuxtjs.org/blog/creating-blog-with-nuxt-content"
+          href="https://github.com/daletom/imgix-demo-blog-nuxtcontent"
           class="mr-8 self-center text-white font-bold hover:underline"
         >
-          Tutorial
+          GH Repo
         </a>
         <AppSearchInput />
       </div>

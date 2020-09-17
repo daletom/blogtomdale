@@ -17,9 +17,7 @@
             v-if="article.img"
             class="h-48 xxlmin:w-1/2 xxlmax:w-full object-cover"
             :src="article.img"
-            sizes="(min-width: 692px) 40vw, 90vw"
-            height="620"
-            :imgixParams="{ fit: 'fill', fill: 'blur' }"
+            sizes="(min-width: 1351px) 25vw, (min-width: 692px) 40vw, 90vw"
             loading="lazy"
             fixed
           />

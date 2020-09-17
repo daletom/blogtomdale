@@ -8,6 +8,7 @@
         :alt="articles[0].author.name"
         class="absolute h-full w-full object-cover"
         sizes="(min-width: 922px) 50vw, 100vw"
+        :imgixParams="{ ch: 'width,dpr' }"
         loading="lazy"
       />
     </div>
@@ -46,7 +47,7 @@
               class="h-48 xxlmin:w-1/2 xxlmax:w-full object-cover"
               :src="article.img"
               :alt="article.alt"
-              :imgixParams="{ h: '192', fit: 'crop' }"
+              :imgixParams="{ h: '192', fit: 'crop', ch: 'width,dpr' }"
               sizes="(min-width: 1216px) calc(25vw - 150px), (min-width: 922px) calc(50vw -150px), 90vw"
               loading="lazy"
             />

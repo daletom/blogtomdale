@@ -20,7 +20,6 @@
             sizes="(min-width: 1351px) 25vw, (min-width: 692px) 40vw, 90vw"
             :imgixParams="{ h: '192', fit: 'crop', ch: 'width,dpr' }"
             loading="lazy"
-            fixed
           />
 
           <div

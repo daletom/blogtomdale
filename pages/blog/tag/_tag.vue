@@ -8,6 +8,7 @@
         :alt="tag.name"
         class="absolute h-full w-full object-cover"
         sizes="(min-width: 922px) 50vw, 100vw"
+        :imgixParams="{ ch: 'width,dpr' }"
         loading="lazy"
       />
     </div>

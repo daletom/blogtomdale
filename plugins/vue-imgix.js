@@ -2,8 +2,9 @@ import Vue from 'vue'
 import VueImgix from 'vue-imgix'
 
 Vue.use(VueImgix, {
-  domain: 'images.unsplash.com',
+  domain: 'imgix.tomdale.website',
   defaultIxParams: {
-    auto: 'format,compress'
+    auto: 'format,compress',
+    ch: 'width,dpr'
   }
 })

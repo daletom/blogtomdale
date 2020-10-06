@@ -1,9 +1,8 @@
 <template>
-  <div class="bg-gray-200">
+  <div>
     <TheHeader />
 
-    <h1 class="font-bold text-4xl">Under Construction - Home Page</h1>
-    <h3 class="mb-4 font-bold text-2xl uppercase text-center">Blog Articles</h3>
+    <h1 class="font-bold text-4xl">Blog Posts</h1>
     <ul class="flex flex-wrap">
       <li
         v-for="article of articles"
@@ -16,7 +15,7 @@
         >
           <ix-img
             v-if="article.img"
-            class="h-48 xxlmin:w-1/3 xxlmax:w-85 self-center object-cover"
+            class="h-48 xxlmin:w-1/3 xxlmax:w-full object-cover"
             :src="article.img"
             sizes="(min-width: 1351px) 25vw, (min-width: 692px) 40vw, 90vw"
             loading="lazy"
@@ -31,32 +30,6 @@
             </p>
           </div>
         </NuxtLink>
-      </li>
-    </ul>
-    <h3 class="mb-4 font-bold text-2xl uppercase text-center">Live Websites and Projects</h3>
-    <ul class="flex flex-wrap">
-      <li
-        v-for="project of projects"
-        :key="project.slug"
-        class="xs:w-full md:w-1/3 px-2 xs:mb-6 md:mb-12 article-card"
-      >
-          <ix-img
-            v-if="project.img"
-            class="h-56 xxlmin:w-1/3 xxlmax:w-full object-cover"
-            :src="project.img"
-            sizes="(min-width: 1351px) 25vw, (min-width: 692px) 40vw, 90vw"
-            :imgixParams="{ ch: 'width,dpr' }"
-            loading="lazy"
-          />
-
-          <div
-            class="p-6 flex flex-col justify-between xxlmin:w-1/2 xxlmax:w-full"
-          >
-            <h2 class="font-bold">{{ project.title }}</h2>
-            <p class="font-bold text-gray-600 text-sm">
-              {{ project.description }}
-            </p>
-          </div>
       </li>
     </ul>
     <h3 class="mb-4 font-bold text-2xl uppercase text-center">Topics</h3>
@@ -99,11 +72,7 @@
 export default {
   async asyncData({ $content, params }) {
     const articles = await $content('articles', params.slug)
-      .only(['title', 'description', 'img', 'slug'])
-      .sortBy('createdAt', 'desc')
-      .fetch()
-    const projects = await $content('projects', params.slug)
-      .only(['title', 'description', 'img', 'slug'])
+      .only(['title', 'description', 'img', 'slug', 'author'])
       .sortBy('createdAt', 'desc')
       .fetch()
     const tags = await $content('tags', params.slug)
@@ -112,7 +81,6 @@ export default {
       .fetch()
     return {
       articles,
-      projects,
       tags
     }
   }

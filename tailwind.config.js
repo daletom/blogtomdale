@@ -6,7 +6,8 @@
  */
 module.exports = {
   future: {
-    removeDeprecatedGapUtilities: true
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true
   },
   theme: {
     screens: {
@@ -17,6 +18,9 @@ module.exports = {
       xl: '1280px',
       xxlmin: '1351px',
       xxlmax: { max: '1350px' }
+    },
+    maxWidth: {
+      '85': '85%'
     },
     fontFamily: {
       display: ['Quicksand', 'sans-serif'],
@@ -42,7 +46,8 @@ module.exports = {
       width: {
         '3/2': '150%',
         '4/2': '200%',
-        '1/2-screen': '50vw'
+        '1/2-screen': '50vw',
+        '85': '85%'
       },
       margin: {
         '-fullh': '-100vh'

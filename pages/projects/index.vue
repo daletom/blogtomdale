@@ -13,7 +13,7 @@
             v-if="project.img"
             class="h-48 xxlmin:w-1/3 xxlmax:w-full object-cover"
             :src="project.img"
-            sizes="(min-width: 1351px) 25vw, (min-width: 692px) 40vw, 90vw"
+            sizes="(min-width: 767px) 25vw, 80vw"
             loading="lazy"
           />
 

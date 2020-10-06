@@ -18,7 +18,7 @@
             v-if="article.img"
             class="h-48 xxlmin:w-1/3 xxlmax:w-85 self-center object-cover"
             :src="article.img"
-            sizes="(min-width: 1351px) 25vw, (min-width: 692px) 40vw, 90vw"
+            sizes="(min-width: 767px) 25vw, 80vw"
             loading="lazy"
           />
 
@@ -44,8 +44,7 @@
             v-if="project.img"
             class="h-56 xxlmin:w-1/3 xxlmax:w-full object-cover"
             :src="project.img"
-            sizes="(min-width: 1351px) 25vw, (min-width: 692px) 40vw, 90vw"
-            :imgixParams="{ ch: 'width,dpr' }"
+            sizes="(min-width: 767px) 25vw, 80vw"
             loading="lazy"
           />
 

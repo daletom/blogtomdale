@@ -54,7 +54,7 @@ Then you can access it at [http://localhost:3000](http://localhost:3000).
 ## Having a look at what I did with images
 
 Now that you are seeing this in your localhost, let's dig in a little more into what we built and why.  If you're following me step-by-step, you may not realize but you also installed the Vue-imgix SDK when you cloned my prismic theme.  This allows us to easily create responsive images in an img or picture element.  For this example, I created a few components and then replaced the `img` tag with an `ix-img` tag to activate the SDK. If you are looking to add this to your existing Prismic project and are not cloning my theme, here is a simple cheatsheet for adding this to Nuxt:
-![Vue-imgix SDK cheatsheet](https://dev-to-uploads.s3.amazonaws.com/i/jgnsqr5bi0q55e033zen.png)
+![Vue-imgix SDK cheatsheet](https://imgix.tomdale.website/vueimgixsdksteps2.png?auto=format,compress&w=600)
 
 I want to focus on one of the components I used for the product images, the ProductGallery.vue component.  This is the `ix-img` tags I used: 
 ```

@@ -1,5 +1,5 @@
 <template>
-  <header class="flex items-center justify-between flex-wrap bg-blue-400 p-6">
+  <header class="flex items-center justify-between flex-wrap bg-purple-400 p-6">
     <NuxtLink to="/"><Logo class="mb-0 mr-6" /></NuxtLink>
     <div class="block sm:hidden">
       <button @click="toggle" class="flex items-center px-3 py-2 border rounded text-teal-lighter border-teal-100 hover:text-white hover:border-white">

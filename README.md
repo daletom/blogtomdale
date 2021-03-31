@@ -1,1 +1,1 @@
-Work in progress for my website blog using nuxt content, imgix, tailwind, & vercel.
+Check out my Website to learn more about the latest Jamstack trends, Web Performance, Image Performance, and see example projects I have been working on with a focus on Vue and React.

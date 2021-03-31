@@ -36,18 +36,18 @@
       <li
         v-for="project of projects"
         :key="project.slug"
-        class="xs:w-full md:w-1/3 px-2 xs:mb-6 md:mb-12 article-card"
+        class="xs:w-full md:w-1/2 sm:w-1/2 lg:w-1/3 px-2 xs:mb-6 md:mb-12 article-card"
       >
           <ix-img
             v-if="project.img"
-            class="h-56 xxlmin:w-1/3 xxlmax:w-full object-cover"
+            class="h-48 w-full self-center object-cover"
             :src="project.img"
-            sizes="(min-width: 767px) 25vw, 80vw"
+            sizes="(min-width: 1024px) calc(33vw - 48px), (min-width: 640px) calc(50vw - 32px), 90vw"
             loading="lazy"
           />
 
           <div
-            class="p-6 flex flex-col justify-between xxlmin:w-1/2 xxlmax:w-full"
+            class="p-6 flex flex-col justify-between w-full"
           >
             <h2 class="font-bold">{{ project.title }}</h2>
             <p class="font-bold text-gray-600 text-sm">
@@ -94,6 +94,66 @@
 
 <script>
 export default {
+  data() {
+    return {
+      title: 'Tom Dale Website Home Page',
+      description: 'Check out my Website to learn more about the latest Jamstack trends, Web Performance, Image Performance, and see example projects I have been working on with a focus on Vue and React.'
+    }
+  },
+  head() {
+    return {
+      title: this.title,
+      description: this.description,
+      ogimage: 'https://tom.imgix.net/tomdaleog.png?auto=format,compress&w=1200',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Check out my Website to learn more about the latest Jamstack trends, Web Performance, Image Performance, and see example projects I have been working on with a focus on Vue and React.'
+        },
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: this.title
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: this.description
+        },
+        {
+          hid: 'twitter:image',
+          name: 'twitter:image',
+          content: 'https://tom.imgix.net/tomdaleog.png?auto=format,compress&w=1200'
+        },
+        {
+          hid: 'twitter:image:alt',
+          name: 'twitter:image:alt',
+          content: this.title
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.title
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.description
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: 'https://tom.imgix.net/tomdaleog.png?auto=format,compress&w=1200'
+        },
+        {
+          hid: 'og:image:alt',
+          property: 'og:image:alt',
+          content: this.title
+        }
+      ]
+    }
+  },
   async asyncData({ $content, params }) {
     const articles = await $content('articles', params.slug)
       .only(['title', 'description', 'img', 'slug'])

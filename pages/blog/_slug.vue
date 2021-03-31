@@ -56,6 +56,59 @@
 </template>
 <script>
 export default {
+  head() {
+    return {
+      title: this.article.title,
+      description: this.article.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.article.description
+        },
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: this.article.title
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: this.article.description
+        },
+        {
+          hid: 'twitter:image',
+          name: 'twitter:image',
+          content: 'https://imgix.tomdale.website' + this.article.img + '?auto=format,compress&w=1200&h=620&fit=crop'
+        },
+        {
+          hid: 'twitter:image:alt',
+          name: 'twitter:image:alt',
+          content: this.article.title
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.article.title
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.article.description
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: 'https://imgix.tomdale.website' + this.article.img + '?auto=format,compress&w=1200&h=620&fit=crop'
+        },
+        {
+          hid: 'og:image:alt',
+          property: 'og:image:alt',
+          content: this.article.title
+        }
+      ]
+    }
+  },
   async asyncData({ $content, params }) {
     const article = await $content('articles', params.slug).fetch()
     const tagsList = await $content('tags')

@@ -21,7 +21,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content: process.env.npm_package_description || 'Check out my Website to learn more about the latest Jamstack trends, Web Performance, Image Performance, and see example projects I have been working on with a focus on Vue and React.'
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/tomdale.svg' }]

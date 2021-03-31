@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-gray-200">
     <TheHeader />
 
     <h1 class="font-bold text-4xl">My Projects</h1>
@@ -7,18 +7,18 @@
       <li
         v-for="project of projects"
         :key="project.slug"
-        class="xs:w-full md:w-1/3 px-2 xs:mb-6 md:mb-12 article-card"
+        class="xs:w-full md:w-1/2 sm:w-1/2 lg:w-1/3 px-2 xs:mb-6 md:mb-12 article-card"
       >
           <ix-img
             v-if="project.img"
-            class="h-48 xxlmin:w-1/3 xxlmax:w-full object-cover"
+            class="h-48 w-full object-cover"
             :src="project.img"
-            sizes="(min-width: 767px) 25vw, 80vw"
+            sizes="(min-width: 1024px) calc(33vw - 48px), (min-width: 640px) calc(50vw - 32px), 90vw"
             loading="lazy"
           />
 
           <div
-            class="p-6 flex flex-col justify-between xxlmin:w-1/2 xxlmax:w-full"
+            class="p-6 flex flex-col justify-between w-full"
           >
             <h2 class="font-bold">{{ project.title }}</h2>
             <p class="font-bold text-gray-600 text-sm">

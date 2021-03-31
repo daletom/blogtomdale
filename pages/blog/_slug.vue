@@ -1,42 +1,26 @@
 <template>
-<div>
+<div class="h-screen flex flex-col">
 <TheHeader />
   <article
-    class="flex lg:h-screen w-screen lg:overflow-hidden xs:flex-col lg:flex-row"
+    class="flex-1 overflow-y-auto"
   >
-    <div class="relative lg:w-1/2 xs:w-full xs:h-84 lg:h-full post-left">
-      <ix-img
-        :src="article.img"
-        :alt="article.alt"
-        class="absolute h-full w-full object-cover"
-        sizes="(min-width: 922px) 50vw, 100vw"
-        :imgixParams="{ ch: 'width,dpr' }"
-        loading="lazy"
-      />
-      <div class="overlay"></div>
-      <div class="absolute top-32 left-32 text-white">
-        <div class="mt-16 -mb-3 flex uppercase text-sm">
-          <p class="mr-3">
-            {{ formatDate(article.createdAt) }}
-          </p>
-          <span class="mr-3">•</span>
-        </div>
-        <h1 class="text-6xl font-bold bg-black bg-opacity-25">{{ article.title }}</h1>
-        <span v-for="(tag, id) in article.tags" :key="id">
-          <NuxtLink :to="`/blog/tag/${tags[tag].slug}`">
-            <span
-              class="truncate uppercase tracking-wider font-medium text-ss px-2 py-1 rounded-full mr-2 mb-2 border border-light-border dark:border-dark-border transition-colors duration-300 ease-linear"
-            >
-              {{ tags[tag].name }}
-            </span>
-          </NuxtLink>
-        </span>
+    <div class="relative h-12 mb-8">
+      <div class="relative top-32 left-32 text-black">
+        <h1 class="font-bold text-4xl">{{ article.title }}</h1>
       </div>
     </div>
     <div
-      class="relative xs:py-8 xs:px-8 lg:py-32 lg:px-16 lg:w-1/2 xs:w-full h-full overflow-y-scroll markdown-body post-right custom-scroll"
+      class="relative py-8 px-8 w-full h-full overflow-y-scroll markdown-body custom-scroll"
     >
-      <h1 class="font-bold text-4xl">{{ article.title }}</h1>
+      <span v-for="(tag, id) in article.tags" :key="id">
+        <NuxtLink :to="`/blog/tag/${tags[tag].slug}`">
+          <span
+            class="truncate uppercase tracking-wider font-medium text-ss px-2 py-1 rounded-full mr-2 mb-2 border border-light-border dark:border-dark-border transition-colors duration-300 ease-linear"
+          >
+            {{ tags[tag].name }}
+          </span>
+        </NuxtLink>
+      </span>
       <p>{{ article.description }}</p>
       <p>Post created: {{ formatDate(article.createdAt) }}</p>
       <p class="pb-4">Post last updated: {{ formatDate(article.updatedAt) }}</p>
@@ -99,23 +83,3 @@ export default {
   }
 }
 </script>
-<style>
-.nuxt-content p {
-  margin-bottom: 20px;
-}
-.nuxt-content h2 {
-  font-weight: bold;
-  font-size: 28px;
-}
-.nuxt-content h3 {
-  font-weight: bold;
-  font-size: 22px;
-}
-.icon.icon-link {
-  background-image: url('~assets/svg/icon-hashtag.svg');
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-size: 20px 20px;
-}
-</style>

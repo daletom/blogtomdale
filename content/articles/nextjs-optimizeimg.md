@@ -1,20 +1,18 @@
 ---
 title: Optimizing Images with Next.JS & Vercel
 description: Providing a simple demo of a Next.js site optimizing images that can be followed along.  It also includes a deep dive into how these images are being optimized.
-tags: 
-  - vercel
-  - webperformance
-  - nextjs
-  - responsive
 createdAt: November 5th, 2020
 img: /nextjsimageptex.png
 alt: Image Optimization with Next JS
+tags: 
+  - vercel
+  - web performance
+  - nextjs
+  - responsive
 ---
-Did you hear!? [Next.js version 10](https://nextjs.org/blog/next-10#images-on-the-web) now includes image optimization! All of you have to do is switch an image tag, import one line, and add your height and width in that tag.  Is it that easy? What's really happening here?  These are all the questions I will answer while giving you an example template and showing you the results.
+Did you hear!? [Next.js version 10](https://nextjs.org/blog/next-10#images-on-the-web) now includes image optimization! All you have to do is switch an image tag, import one line, and add your height and width in that tag.  Is it that easy? What's really happening here?  These are all the questions I will answer while giving you an example template and showing you the results.
 
 ## Let's Dive In and Clone a Next.js Project
-
-
 If you want to follow along, just enter this in your terminal to clone the next.js starter I have for this image optimization example:
 ```
 npx create-next-app nextjs-imgopt --use-npm --example "https://github.com/daletom/nextjs-imgblog"

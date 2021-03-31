@@ -1,29 +1,27 @@
 <template>
   <div class="bg-gray-200">
     <TheHeader />
-
-    <h1 class="font-bold text-4xl">Under Construction - Home Page</h1>
     <h3 class="mb-4 font-bold text-2xl uppercase text-center">Blog Articles</h3>
     <ul class="flex flex-wrap">
       <li
         v-for="article of articles"
         :key="article.slug"
-        class="xs:w-full md:w-1/3 px-2 xs:mb-6 md:mb-12 article-card"
+        class="xs:w-full md:w-1/2 sm:w-1/2 lg:w-1/3 px-2 xs:mb-6 md:mb-12 article-card"
       >
         <NuxtLink
           :to="{ name: 'blog-slug', params: { slug: article.slug } }"
-          class="flex transition-shadow duration-150 ease-in-out shadow-sm hover:shadow-md xxlmax:flex-col"
+          class="flex transition-shadow duration-150 ease-in-out shadow-sm hover:shadow-md flex-col"
         >
           <ix-img
             v-if="article.img"
-            class="h-48 xxlmin:w-1/3 xxlmax:w-85 self-center object-cover"
+            class="h-48 w-full self-center object-cover"
             :src="article.img"
-            sizes="(min-width: 767px) 25vw, 80vw"
+            sizes="(min-width: 1024px) calc(33vw - 48px), (min-width: 640px) calc(50vw - 32px), 90vw"
             loading="lazy"
           />
 
           <div
-            class="p-6 flex flex-col justify-between xxlmin:w-1/2 xxlmax:w-full"
+            class="p-6 flex flex-col justify-between w-full"
           >
             <h2 class="font-bold">{{ article.title }}</h2>
             <p class="font-bold text-gray-600 text-sm">

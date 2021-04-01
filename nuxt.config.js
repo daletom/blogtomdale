@@ -49,7 +49,8 @@ export default {
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/google-analytics'
   ],
   /*
    ** Nuxt.js modules
@@ -58,6 +59,9 @@ export default {
     // Doc: https://github.com/nuxt/content
     '@nuxt/content'
   ],
+  googleAnalytics: {
+    id: 'G-NLSV2SJ0ZG'
+  },
   /*
    ** Content module configuration
    ** See https://content.nuxtjs.org/configuration

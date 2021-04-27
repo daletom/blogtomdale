@@ -17,15 +17,11 @@ If you want to follow along, just enter this in your terminal to clone the next.
 ```
 npx create-next-app nextjs-imgopt --use-npm --example "https://github.com/daletom/nextjs-imgblog"
 ```
-then run a 
-```
-npm install
-```
-to install the dependencies. The go into the project
+Then go into the project
 ```
 cd nextjs-imgopt
 ```
-and run the site in development
+then you might need to install the dependencies `npm install` or fix some outdated items `npm audit fix`. Now you can run the site in development
 ```
 npm run dev
 ```

@@ -38,6 +38,10 @@
         :key="project.slug"
         class="xs:w-full md:w-1/2 sm:w-1/2 lg:w-1/3 px-2 xs:mb-6 md:mb-12 article-card"
       >
+      <a
+          :href="project.link"
+          class="flex transition-shadow duration-150 ease-in-out shadow-sm hover:shadow-md flex-col"
+        >
           <ix-img
             v-if="project.img"
             class="h-48 w-full self-center object-cover"
@@ -54,6 +58,7 @@
               {{ project.description }}
             </p>
           </div>
+      </a>
       </li>
     </ul>
     <h3 class="mb-4 font-bold text-2xl uppercase text-center">Topics</h3>
